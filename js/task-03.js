@@ -12,11 +12,6 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-//Надо изображения загрузить на вкладку HTML и сделать так, чтобы они отображались в виде галереи изображений.
-//Для этого необходимо создать шаблонную строку и добавить в нее элементы массива images.
-//Для создания разметки можно использовать функцию createGalleryItem(images), которая будет создавать и возвращать разметку элемента галереи по указанному шаблону.
-//Разметка элемента галереи должна состоять из тегов li и img.
-//Все элементы галереи должны добавляться в DOM за одну операцию вставки.
 const galleryList = document.querySelector(".gallery");
 const createGalleryItem = (images) => {
   return images.map(({ url, alt }) => {
@@ -25,4 +20,4 @@ const createGalleryItem = (images) => {
 };
 const elements = createGalleryItem(images).join("");
 galleryList.insertAdjacentHTML("afterbegin", elements);
-galleryList.setAttribute("style", "list-style:none; display: flex; justify-content: space-between;"); 
+galleryList.setAttribute("style", "list-style:none; display: flex; justify-content: center; gap: 40px;"); 
