@@ -1,12 +1,12 @@
-const input = document.querySelector('#validation-input');
-const inputLength = Number(input.dataset.length);
+const validInput = document.querySelector('#validation-input');
+const inputLength = validInput.getAttribute('data-length');
 
-input.addEventListener('blur', (event) => {
-    if (event.currentTarget.value.length === inputLength) {
-        input.classList.add('.valid');
-        input.classList.remove('.invalid');
-    } else {
-        input.classList.add('.invalid');
-        input.classList.remove('.valid');
+validInput.addEventListener('blur', (event) => {
+     validInput.classList.remove('valid', 'invalid');
+    if (event.currentTarget.value.length === Number(inputLength)) {
+        validInput.classList.add('valid');
+    }
+    else {
+        validInput.classList.add('invalid');
     }
 });
