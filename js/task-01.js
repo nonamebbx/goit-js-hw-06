@@ -30,8 +30,5 @@ document.addEventListener('DOMContentLoaded', function() {
       console.log(`Category: ${categoryName}`);
       console.log(`Elements: ${elements.length}`);
     });
-  
-   
-    console.log(`Total elements: ${elementCount}`);
   });
   
