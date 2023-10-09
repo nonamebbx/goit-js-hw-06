@@ -1,10 +1,37 @@
+document.addEventListener('DOMContentLoaded', function() {
 
-const categories = document.querySelectorAll(".item")
-    console.log(`Number of a categories: ${categories.length}`)
-    
+    const categoriesList = document.getElementById('categories');
+  
+
+    const categories = categoriesList.querySelectorAll('.item');
+  
+
+    let categoryCount = 0;
+    let elementCount = 0;
+  
+
+    console.log(`Number of categories: ${categories.length}`);
+  
+ 
     categories.forEach((category) => {
-        const nameCategory = category.querySelector("h2").textContent;
-        const quantityElements = category.querySelectorAll("li").length;
-        console.log(`Category: ${nameCategory}`);
-        console.log(`Elements: ${quantityElements}`);  
+   
+      categoryCount++;
+  
+    
+      const categoryName = category.querySelector('h2').textContent;
+  
+ 
+      const elements = category.querySelectorAll('li');
+  
+ 
+      elementCount += elements.length;
+  
+    
+      console.log(`Category: ${categoryName}`);
+      console.log(`Elements: ${elements.length}`);
     });
+  
+   
+    console.log(`Total elements: ${elementCount}`);
+  });
+  
